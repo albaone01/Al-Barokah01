@@ -135,6 +135,72 @@ nav ul li a:hover {
             border-radius: 4px;
         }
 
+        #about {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.icon-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 200px;
+}
+
+.icon-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.icon-box h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.icon-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+
         .log{
             background-color: rgb(46, 201, 248);
             border-radius: 10px;
@@ -278,9 +344,34 @@ nav ul li a:hover {
     </section>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>We are dedicated to providing the best products at the best prices.</p>
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>We are dedicated to providing the best products at the best prices. Our mission is to deliver quality and value to our customers. Join us on our journey to excellence.</p>
+                <div class="about-icons">
+                    <div class="icon-box">
+                        <img src="Nabati.jpg" alt="Quality Products">
+                        <h3>Quality Products</h3>
+                        <p>Our products are carefully sourced to ensure the highest quality.</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="gula.jpg" alt="Best Prices">
+                        <h3>Best Prices</h3>
+                        <p>We offer competitive prices on all our products.</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="susu.jpg" alt="Customer Support">
+                        <h3>Customer Support</h3>
+                        <p>Our support team is here to assist you 24/7.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="maskot.jpg" alt="About Us Image">
+            </div>
+        </div>
     </section>
+    
 
     <section id="contact" class="contact-section">
         <h2>Kritik & Saran</h2>
@@ -330,48 +421,48 @@ nav ul li a:hover {
                     name: 'Snack', 
                     description: 'Best selling snack product',
                     variants: [
-                        { name: 'Variant A', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant B', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant C', img: 'https://via.placeholder.com/50' }
+                        { name: 'Nabati', img: 'nabati.jpg' },
+                        { name: 'Wafello', img: 'wafelo.jpg' },
+                        { name: 'Gery Salut', img: 'gery.jpg' }
                     ]
                 },
                 { 
                     name: 'Drink', 
                     description: 'Best selling drink product',
                     variants: [
-                        { name: 'Variant A', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant B', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant C', img: 'https://via.placeholder.com/50' }
+                        { name: 'Cocacola', img: 'Coca.jpg' },
+                        { name: 'Aqua', img: 'Aqua.jpg' },
+                        { name: 'Cocacola frezz', img: 'Cocaijo.jpg' }
                     ]
                 }
             ];
 
             const products = [
-                { 
-                    name: 'Snack', 
-                    description: 'This is product 1',
+            { 
+                    name: 'Soap', 
+                    description: 'This is product 3',
                     variants: [
-                        { name: 'Variant A', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant B', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant C', img: 'https://via.placeholder.com/50' }
+                        { name: 'Daia', img: 'daia.jpg' },
+                        { name: 'Dawni', img: 'Dawni.jpg' },
+                        { name: 'Harpic', img: 'harpic.jpg' }
                     ]
                 },
                 { 
-                    name: 'Drink', 
-                    description: 'This is product 2',
+                    name: 'Snack', 
+                    description: 'Best selling snack product',
                     variants: [
-                        { name: 'Variant A', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant B', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant C', img: 'https://via.placeholder.com/50' }
+                        { name: 'Nabati', img: 'nabati.jpg' },
+                        { name: 'Wafello', img: 'wafelo.jpg' },
+                        { name: 'Gery Salut', img: 'gery.jpg' }
                     ]
                 },
                 { 
                     name: 'Soap', 
                     description: 'This is product 3',
                     variants: [
-                        { name: 'Variant A', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant B', img: 'https://via.placeholder.com/50' },
-                        { name: 'Variant C', img: 'https://via.placeholder.com/50' }
+                        { name: 'Daia', img: 'daia.jpg' },
+                        { name: 'Dawni', img: 'Dawni.jpg' },
+                        { name: 'Harpic', img: 'harpic.jpg' }
                     ]
                 }
             ];
