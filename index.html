@@ -310,31 +310,7 @@ nav ul li a:hover {
             padding: 10px;
             background-color: #f5f5f5;
         }
-        .text-box {
-    width: 100%; /* Pastikan lebar elemen mencakup seluruh area */
-    overflow: hidden; /* Menghindari teks keluar dari area */
-    position: relative;
-}
-
-.typing-animation {
-    display: inline-block; /* Teks berada di dalam baris */
-    border-right: 2px solid black; /* Garis berkedip di akhir teks */
-    white-space: nowrap; /* Mencegah teks terpotong ke bawah */
-    animation: typing 5s steps(40, end) 1s 1 normal both, blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; } /* Mengatur lebar hingga penuh */
-}
-
-@keyframes blink-caret {
-    from { border-color: transparent; }
-    to { border-color: black; }
-}
-
-
-
+        
     </style>
 </head>
 <body>
@@ -358,7 +334,7 @@ nav ul li a:hover {
     <div class="log">
         <img src="maskot33.png" alt="Al Barokah Mascot">
         <div class="text-box">
-            <p class="typing-animation">Belanja Cerdas di Toko Al Barokah! Hemat besar dengan harga terjangkau untuk setiap barang yang Anda butuhkan, mulai dari susu segar hingga es krim favorit. Dengan pelayanan ramah dan produk berkualitas, kami siap memenuhi semua kebutuhan Anda!</p>
+            <p>Belanja Cerdas di Toko Al Barokah! Hemat besar dengan harga terjangkau untuk setiap barang yang Anda butuhkan, mulai dari susu segar hingga es krim favorit. Dengan pelayanan ramah dan produk berkualitas, kami siap memenuhi semua kebutuhan Anda!</p>
         </div>
     </div>
 </section>
@@ -379,22 +355,22 @@ nav ul li a:hover {
         <div class="about-container">
             <div class="about-content">
                 <h2>Tentang kami</h2>
-                <p class="animated-text">Kami berdedikasi untuk menyediakan produk terbaik dengan harga terbaik. Misi kami adalah memberikan kualitas dan nilai kepada pelanggan kami. Bergabunglah dengan kami dalam perjalanan menuju keunggulan.</p>
+                <p>Kami berdedikasi untuk menyediakan produk terbaik dengan harga terbaik. Misi kami adalah memberikan kualitas dan nilai kepada pelanggan kami. Bergabunglah dengan kami dalam perjalanan menuju keunggulan.</p>
                 <div class="about-icons">
                     <div class="icon-box">
                         <img src="Nabati.jpg" alt="Quality Products">
                         <h3>Produk berkualitas</h3>
-                       <p class="animated-text">Produk kami diambil secara cermat untuk memastikan kualitas tertinggi.</p>
+                       <p>Produk kami diambil secara cermat untuk memastikan kualitas tertinggi.</p>
                     </div>
                     <div class="icon-box">
                         <img src="gula.jpg" alt="Best Prices">
                         <h3>Harga Terbaik</h3>
-                        <p class="animated-text">Kami menawarkan harga yang kompetitif untuk semua produk kami.</p>
+                        <p>Kami menawarkan harga yang kompetitif untuk semua produk kami.</p>
                     </div>
                     <div class="icon-box">
                         <img src="susu.jpg" alt="Customer Support">
                         <h3>Dukungan Pelanggan</h3>
-                        <p class="animated-text">Tim dukungan kami siap membantu Anda 24/7.</p>
+                        <p>Tim dukungan kami siap membantu Anda 24/7.</p>
                     </div>
                 </div>
             </div>
@@ -543,26 +519,6 @@ nav ul li a:hover {
                 e.preventDefault();
                 alert('Form submitted!');
             });
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-    const animatedText = document.querySelector('.typing-animation');
-
-    function isVisible(element) {
-        const rect = element.getBoundingClientRect();
-        return rect.top <= window.innerHeight && rect.bottom >= 0;
-    }
-
-    function triggerAnimation() {
-        if (isVisible(animatedText)) {
-            animatedText.classList.add('typing-animation');
-            window.removeEventListener('scroll', triggerAnimation); // Animasi hanya dipicu sekali
-        }
-    }
-
-    window.addEventListener('scroll', triggerAnimation);
-    triggerAnimation(); // Cek pertama kali saat halaman dimuat
-});
-
     </script>
 </body>
 </html>
