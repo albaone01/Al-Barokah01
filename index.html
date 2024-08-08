@@ -311,22 +311,23 @@ nav ul li a:hover {
             background-color: #f5f5f5;
         }
         .typing-animation {
-    border-right: 2px solid;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 2s steps(30, end) forwards, blink 0.5s step-end infinite alternate;
+    overflow: hidden; /* Menghindari teks keluar dari area */
+    white-space: nowrap; /* Teks tidak akan terpotong */
+    border-right: 2px solid black; /* Garis yang berkedip */
+    width: 0; /* Mulai dari lebar 0 */
+    animation: typing 3s steps(50, end) forwards, blink 0.5s step-end infinite alternate;
 }
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 100%; }
+    to { width: 100%; } /* Mengatur lebar hingga penuh */
 }
 
 @keyframes blink {
     from { border-color: transparent; }
     to { border-color: black; }
 }
+
 
     </style>
 </head>
