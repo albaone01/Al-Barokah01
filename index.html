@@ -16,16 +16,19 @@
         }
 
         header {
-            position: relative;
+            
             height: 400px;
             overflow: hidden;
         }
 
         header .slider {
             display: flex;
+            position: absolute;
+            top: 55%;
             width: 300%; /* Tetap 300% karena kita punya 3 gambar */
             height: 100vh; /* Menyesuaikan tinggi slider dengan tinggi viewport */
             animation: slide 15s infinite;
+            z-index: 1000;
             overflow: hidden; /* Menyembunyikan elemen yang keluar dari batas slider */
         }
 
@@ -43,11 +46,11 @@
 
 
         header nav {
-    position: absolute;
-    top: 95%;
+    position: relative;
+    top: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    background: rgba(255, 255, 255, 0.2); /* Transparan seperti kaca */
     padding: 15px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -72,7 +75,7 @@ nav ul li a {
     transition: all 0.3s;
     padding: 5px 10px;
     border-radius: 5px;
-    bbackground: linear-gradient(90deg, #ff4b2b, #ff416c);
+    background: rgba(0, 0, 0, 0.2); /* Transparan dengan latar belakang */
     backdrop-filter: blur(5px); /* Efek blur pada link */
     -webkit-backdrop-filter: blur(5px); /* Dukungan untuk Safari */
 }
@@ -104,7 +107,7 @@ nav ul li a:hover {
             border: 1px solid #ddd;
             padding: 1rem;
             text-align: center;
-            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+            background: linear-gradient(90deg,#fc00ff, #00dbde);
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -262,28 +265,30 @@ nav ul li a:hover {
         }
 
         footer {
-            background: linear-gradient(90deg, #ff4b2b, #ff416c);
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
 
-        footer .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-        footer .footer-content div {
-            flex: 1;
-            min-width: 200px;
-        }
-        footer li a{
-            color: #eee;
-            text-decoration: none;
-            list-style-type: none;
-        }
+footer .footer-content div {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer li a {
+    color: #eee;
+    text-decoration: none;
+    list-style-type: none;
+}
+
 
         ul {
     list-style-type: none; /* Menghilangkan titik pada daftar */
@@ -314,21 +319,16 @@ nav ul li a:hover {
 </head>
 <body>
     <header>
-        <div class="slider">
-            <img src="maskot2.jpg" alt="Slide 1">
-            <img src="maskot2.jpg" alt="Slide 2">
-            <img src="maskot2.jpg" alt="Slide 3">
-        </div>
-         <nav>
+        <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#best-sellers">Product</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav> 
-    </header>
-    
+        </nav>
+
+        
 <!-- Menambahkan video -->
 <div style="height: 100vh; position: relative; margin: 3px; border-radius: 5px;">
     <video width="100%" height="auto" controls style="position: absolute; left: 50%; transform: translateX(-50%);">
@@ -336,6 +336,14 @@ nav ul li a:hover {
         Video Anda tidak dapat diputar.
     </video>
 </div>
+        <div class="slider">
+            <img src="maskot2.jpg" alt="Slide 1">
+            <img src="maskot2.jpg" alt="Slide 2">
+            <img src="maskot2.jpg" alt="Slide 3">
+        </div>
+         
+    </header>
+
 
 
     <section>
