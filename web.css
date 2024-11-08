@@ -17,9 +17,9 @@ header {
 .logo-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px 30px;
-    background: rgb(252, 33, 33); /* Background hitam transparan */
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
     position: fixed;
     width: 100%;
     z-index: 20;
@@ -49,49 +49,47 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6df736;
+    color: #ffffff;
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Video Section */
+
+
 .video-section {
     position: relative;
-    height: 400px; /* Atur tinggi video */
-    overflow: hidden;
     z-index: 10;
 }
 
-.background-video {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
+.slider-section {
+    position: relative;
+    z-index: 20;
 }
 
-/* Slider Styling */
 .slider {
     display: flex;
-    width: 300%; /* Menampung 3 gambar */
-    height: 400px; /* Tinggi slider */
-    position: absolute;
-    top: 100%;
+    width: 300%;
+    height: 400px;
     animation: slide 15s infinite;
-    z-index: 5;
 }
 
-.slider img {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
+.slider-section {
+    margin-top: 20px; /* Sesuaikan agar tidak menempel dengan video */
 }
 
-/* Keyframes for Slider */
-@keyframes slide {
-    0%, 20%, 100% { transform: translateX(0); }
-    33%, 53% { transform: translateX(-100vw); }
-    66%, 86% { transform: translateX(-200vw); }
+.video-section {
+    height: 300px; /* Sesuaikan tinggi video */
+    overflow: hidden;
+}
+
+.slider {
+    height: 300px; /* Sesuaikan tinggi slider */
 }
 
 
+
+.slider-section {
+    overflow: hidden;
+}
 
         section {
             padding: 2rem;
@@ -112,7 +110,7 @@ nav ul li a:hover {
             border: 1px solid #ddd;
             padding: 1rem;
             text-align: center;
-            background: linear-gradient(90deg,#fc00ff, #00dbde);
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s, box-shadow 0.3s;
