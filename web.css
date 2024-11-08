@@ -19,7 +19,7 @@ header {
     align-items: center;
     justify-content: space-around;
     padding: 10px 30px;
-    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    background: rgb(46, 201, 248);
     position: fixed;
     width: 100%;
     z-index: 20;
@@ -86,6 +86,12 @@ nav ul li a:hover {
 }
 
 
+/* Keyframes for Slider */
+@keyframes slide {
+    0%, 20%, 100% { transform: translateX(0); }
+    33%, 53% { transform: translateX(-100vw); }
+    66%, 86% { transform: translateX(-200vw); }
+}
 
 .slider-section {
     overflow: hidden;
