@@ -54,47 +54,38 @@ nav ul li a:hover {
 }
 
 
-
-.video-section {
-    position: relative;
-    z-index: 10;
-}
-
 .slider-section {
     position: relative;
     z-index: 20;
+    margin-top: 20px; /* Jarak dari video */
+    overflow: hidden; /* Agar gambar tidak keluar dari area slider */
+    width: 100vw; /* Slider memenuhi lebar viewport */
+}
+
+.video-section {
+    height: 450px; /* Sesuaikan tinggi video */
+    overflow: hidden;
 }
 
 .slider {
     display: flex;
-    width: 300%;
-    height: 400px;
+    width: 300%; /* 3 gambar, total lebar slider 300% dari viewport */
+    height: 250px; /* Sesuaikan tinggi slider */
     animation: slide 15s infinite;
 }
 
-.slider-section {
-    margin-top: 20px; /* Sesuaikan agar tidak menempel dengan video */
+.slider img {
+    width: 100vw; /* Gambar memenuhi lebar viewport */
+    height: 100%; /* Gambar mengisi tinggi slider */
+    object-fit: cover; /* Menjaga proporsi gambar */
 }
 
-.video-section {
-    height: 300px; /* Sesuaikan tinggi video */
-    overflow: hidden;
-}
-
-.slider {
-    height: 300px; /* Sesuaikan tinggi slider */
-}
-
-
-/* Keyframes for Slider */
+/* Keyframes untuk menggeser slider */
 @keyframes slide {
-    0%, 20%, 100% { transform: translateX(0); }
-    33%, 53% { transform: translateX(-100vw); }
-    66%, 86% { transform: translateX(-200vw); }
-}
-
-.slider-section {
-    overflow: hidden;
+    0%, 20% { transform: translateX(0); }
+    33%, 53% { transform: translateX(-100vw); } /* Geser ke gambar kedua */
+    66%, 86% { transform: translateX(-200vw); } /* Geser ke gambar ketiga */
+    100% { transform: translateX(0); } /* Kembali ke gambar pertama */
 }
 
         section {
